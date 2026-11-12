@@ -1,7 +1,10 @@
 
+import { useState } from 'react';
 import './App.css';
 
 function App() {
+  const [showMore, setShowMore] = useState(false);
+
   return (
     <div className="app">
 
@@ -18,12 +21,26 @@ function App() {
       <main>
         <section className="hero">
           <h1>Dobrodošli na StudentHub!</h1>
+
           <p>
             Sve što ti je potrebno za uspešno studiranje
             nalazi se na jednom mestu.
           </p>
 
-          <button>Saznaj više</button>
+          <button onClick={() => setShowMore(!showMore)}>
+            {showMore ? 'Prikaži manje' : 'Saznaj više'}
+          </button>
+
+          {showMore && (
+            <div className="more-info">
+              <h2>O StudentHub-u</h2>
+              <p>
+                StudentHub je platforma namenjena studentima
+                koja omogućava lakšu organizaciju studiranja,
+                pristup materijalima i razmenu korisnih informacija.
+              </p>
+            </div>
+          )}
         </section>
 
         <section className="cards">

@@ -79,3 +79,23 @@ button {
   color: #666;
   line-height: 1.5;
 }
+
+
+.more-info {
+  margin: 30px auto 0;
+  padding: 25px;
+  max-width: 600px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 3px 12px #00000010;
+}
+
+.more-info h2 {
+  color: #263b80;
+  margin-bottom: 15px;
+}
+
+.more-info p {
+  color: #666;
+  line-height: 1.6;
+}
